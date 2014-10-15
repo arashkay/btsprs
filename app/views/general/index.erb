@@ -14,20 +14,25 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Merriweather:400,400italic' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap and Font Awesome css -->
-    <%= stylesheet_link_tag "site", :media => "all" %>
+    <link href="/stylesheets/font-awesome.min.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme stylesheet -->
-    <link href="/assets/style.default.css" rel='stylesheet' type='text/css' />
+    <link href="/stylesheets/style.default.css" rel='stylesheet' type='text/css' />
 
+    <!-- Custom stylesheet - for your changes -->
+    <link href="/stylesheets/custom.css" rel="stylesheet">
+    <%= stylesheet_link_tag "site", :media => "all" %>
+    
     <!-- Responsivity for older IE -->
-    <script src="assets/respond.min.js"></script>
+    <script src="/stylesheets/respond.min.js"></script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.png">
     <!-- owl carousel css -->
 
-    <link href="assets/owl.carousel.css" rel="stylesheet">
-    <link href="assets/owl.theme.css" rel="stylesheet">
+    <link href="/stylesheets/owl.carousel.css" rel="stylesheet">
+    <link href="/stylesheets/owl.theme.css" rel="stylesheet">
 </head>
 <body>
 
@@ -611,8 +616,12 @@ _________________________________________________________ -->
     </div>
     <!-- /#all -->
 
+    <script src="/javascripts/jquery-1.11.1.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/jquery.cookie.js"></script>
+    <script src="/javascripts/front.js"></script>
+    <script src="/javascripts/owl.carousel.min.js"></script>
     <%= javascript_include_tag "site" %>
-
 
 </body>
 

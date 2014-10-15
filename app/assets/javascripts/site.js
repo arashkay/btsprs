@@ -1,6 +1,0 @@
-//= require 'respond.min.js'
-//= require 'jquery-1.11.1.min.js'
-//= require 'bootstrap.min.js'
-//= require 'jquery.cookie.js'
-//= require 'front.js'
-//= require 'owl.carousel.min.js'
