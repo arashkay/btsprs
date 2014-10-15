@@ -15,6 +15,7 @@ config/defaults.yml
 .DS_Store
 .yardoc/
 dump.rdb
+.keep
 doc/
 
 /db/schema.rb
