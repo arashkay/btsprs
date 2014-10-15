@@ -1,0 +1,9 @@
+body.form-control {
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+body.form-control:focus {
+  box-shadow: none;
+}

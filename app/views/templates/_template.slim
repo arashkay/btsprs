@@ -1,0 +1,20 @@
+.col-md-3.col-sm-4
+  .product
+    .image
+      a href="detail.html"
+       img.img-responsive.image1 src=template.image(:medium)
+    .text
+      h3
+        a href="detail.html" #{template.name}
+      p.price #{template.price}
+    p.buttons
+      a.btn.btn-default href="detail.html"
+      a.btn.btn-default href="basket.html"
+        i.fa.fa-shopping-cart
+        | Add to cart
+    .ribbon.sale
+      .theribbon تخفیف
+      .ribbon-background
+    .ribbon.new
+      .theribbon جدید
+      .ribbon-background

@@ -1,0 +1,13 @@
+h1 قالب ها 
+- @templates.each do |template|
+  .row
+    .col-sm-2
+      img src=template.image.url(:thumb)
+    .col-sm-10
+      h3
+        = template.name
+        small
+          |  
+          = template.price
+      p= strip_tags template.description
+      a.btn.btn-primary href=edit_template_path(template) ویرایش

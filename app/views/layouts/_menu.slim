@@ -1,0 +1,12 @@
+-unless current_admin.nil?
+  li class=( 'index' == params[:action] ? :active : '' )
+    a href=templates_path 
+      i.fa.fa-dashboard.fa-lg
+      | 
+      span.title  قالب ها 
+  li class=( 'new' == params[:action] ? :active : '' )
+    a href=new_template_path 
+      i.fa.fa-plus.fa-lg
+      | 
+      span.title قالب جدید
+

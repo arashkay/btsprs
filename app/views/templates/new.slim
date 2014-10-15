@@ -1,0 +1,57 @@
+=content_for :head do
+  link rel="stylesheet" type="text/css" href="/assets/editorcss"
+  script src="/assets/wysihtml5-0.3.0.min.js"
+  script src="/assets/editor.rules.js"
+  script src='/assets/templates.js'
+
+h1 ثبت قالب
+= form_for @template, url: ( @template.new_record? ? templates_path : template_path(@template)), html: { multipart: true, class: 'form-horizontal' } do |form|
+  .form-group
+    .col-sm-3
+    .col-sm-7
+      - if @template.errors.any?
+        .alert.alert-danger
+          ul
+            - @template.errors.full_messages.each do |error|
+              li= error
+  .form-group
+    label.control-label.col-sm-3 نام
+    .col-sm-7
+      = form.text_field :name, class: 'form-control', placeholder: 'نام'
+  .form-group
+    label.control-label.col-sm-3 قیمت (تومان)
+    .col-sm-7
+      = form.text_field :price, class: 'form-control', placeholder: 'قیمت'
+  .form-group
+    label.control-label.col-sm-3 توضیحات
+    .col-sm-7
+      nav#editor-toolbar.navbar.navbar-default.navbar-editor role="navigation"
+        .container-fluid
+          ul.nav.navbar-nav
+            li
+              a data-wysihtml5-command="h2" data-wysihtml5-command-value='h2'
+                i.fa.fa-header
+            li
+              a data-wysihtml5-command="bold"
+                i.fa.fa-bold
+            li
+              a data-wysihtml5-command="italic"
+                i.fa.fa-italic
+            li
+              a data-wysihtml5-command="insertUnorderedList"
+                i.fa.fa-list-ul
+            li
+              a data-wysihtml5-command="insertOrderedList"
+                i.fa.fa-list-ol
+      = form.text_area :description, class: 'form-control', placeholder: 'توضیحات', rows: 10, id: 'editor'
+  .form-group
+    label.control-label.col-sm-3 عکس
+    .col-sm-7
+      = form.file_field :image, class: 'form-control'
+  .form-group
+    label.control-label.col-sm-3 فایل زیپ
+    .col-sm-7
+      = form.file_field :source, class: 'form-control'
+  .form-group
+    .col-sm-offset-3.col-sm-6
+      = form.submit 'ثبت', class: 'btn btn-primary'
