@@ -16,6 +16,7 @@ gem 'mailgun'
 gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
 gem 'bootstrap-wysihtml5-rails'
+gem "non-stupid-digest-assets"
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 group :development do
